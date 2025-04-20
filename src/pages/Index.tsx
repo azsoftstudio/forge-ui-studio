@@ -1,43 +1,9 @@
-
 import React from "react";
 import { Navbar } from "@/components/navbar";
 import { CustomButton } from "@/components/ui/custom-button";
 import { FeatureCard } from "@/components/feature-card";
 import { TestimonialCard } from "@/components/testimonial-card";
-
-// Icons for features
-const GridIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2" />
-    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2" />
-    <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2" />
-    <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2" />
-  </svg>
-);
-
-const PreviewIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-    <path d="M12 5C7.8 5 4.3 8.1 3 12C4.3 15.9 7.8 19 12 19C16.2 19 19.7 15.9 21 12C19.7 8.1 16.2 5 12 5ZM12 17C9.2 17 7 14.8 7 12C7 9.2 9.2 7 12 7C14.8 7 17 9.2 17 12C17 14.8 14.8 17 12 17ZM12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C13.7 15 15 13.7 15 12C15 10.3 13.7 9 12 9Z" fill="currentColor" />
-  </svg>
-);
-
-const ResponsiveIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-    <path d="M19 3H5C3.89 3 3 3.89 3 5V12H5V5H19V19H12V21H19C20.1 21 21 20.1 21 19V5C21 3.89 20.1 3 19 3ZM11 16C11 16.55 10.55 17 10 17H9V18H11V20H9C8.45 20 8 19.55 8 19V17C8 16.45 8.45 16 9 16H10V15H8V13H10C10.55 13 11 13.45 11 14V16ZM16 19H14V13H16V19ZM13 8.5V7H17V8.5H13Z" fill="currentColor" />
-  </svg>
-);
-
-const AnimationIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-    <path d="M7 13.5V20.5H17V13.5L12 8.5L7 13.5ZM12 3.5L2 13.5H5V21.5H19V13.5H22L12 3.5Z" fill="currentColor" />
-  </svg>
-);
-
-const HybridIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-    <path d="M3 9H7V5H3V9ZM3 14H7V10H3V14ZM8 14H12V10H8V14ZM13 14H17V10H13V14ZM8 9H12V5H8V9ZM13 5V9H17V5H13ZM18 14H22V10H18V14ZM3 19H7V15H3V19ZM8 19H12V15H8V19ZM13 19H17V15H13V19ZM18 19H22V15H18V19ZM18 5V9H22V5H18Z" fill="currentColor" />
-  </svg>
-);
+import { Grid, MonitorPlay, Layout, Layers, Film } from "lucide-react";
 
 const Index = () => {
   return (
@@ -45,35 +11,35 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Design Smarter. <br />
                 <span className="text-gradient">Build Faster.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                 A powerful Unity plugin that allows developers to visually design, customize, and animate user interfaces—like Figma, but made for Unity.
               </p>
               <div className="flex flex-wrap gap-4">
-                <CustomButton variant="primary">
+                <CustomButton variant="primary" className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
                   Download
                 </CustomButton>
-                <CustomButton variant="secondary">
+                <CustomButton variant="secondary" className="animate-slide-up" style={{ animationDelay: "0.4s" }}>
                   View on GitHub
                 </CustomButton>
-                <CustomButton variant="outline">
+                <CustomButton variant="outline" className="animate-slide-up" style={{ animationDelay: "0.5s" }}>
                   Watch Demo
                 </CustomButton>
               </div>
             </div>
-            <div className="md:w-1/2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <div className="md:w-1/2 animate-fade-in animate-float" style={{ animationDelay: "0.3s" }}>
               <div className="glass-card p-4 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80" 
-                  alt="UI Forge Interface" 
-                  className="rounded-lg w-full h-auto"
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" 
+                  alt="UI Forge Interface Preview" 
+                  className="rounded-lg w-full h-auto transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -84,7 +50,7 @@ const Index = () => {
       {/* Features Section */}
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-forge-darker">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Everything you need to create beautiful and responsive user interfaces for your Unity games and applications.
@@ -93,35 +59,35 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard 
-              icon={<GridIcon />}
+              icon={<Grid size={32} />}
               title="Grid System"
               description="Precisely position UI elements with a flexible grid system that makes alignment easy."
               className="animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             />
             <FeatureCard 
-              icon={<PreviewIcon />}
+              icon={<MonitorPlay size={32} />}
               title="Preview Mode"
               description="Instantly see your changes with a real-time preview that accurately reflects the final result."
               className="animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             />
             <FeatureCard 
-              icon={<ResponsiveIcon />}
+              icon={<Layout size={32} />}
               title="Responsive UI"
               description="Create interfaces that adapt to different screen sizes with responsive design tools."
               className="animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             />
             <FeatureCard 
-              icon={<AnimationIcon />}
+              icon={<Film size={32} />}
               title="Animation Panel"
               description="Design complex animations with an intuitive timeline-based animation editor."
               className="animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             />
             <FeatureCard 
-              icon={<HybridIcon />}
+              icon={<Layers size={32} />}
               title="Hybrid Elements"
               description="Mix and match standard Unity UI components with custom elements for complete flexibility."
               className="animate-fade-in"
@@ -150,19 +116,19 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="relative aspect-video glass-card overflow-hidden rounded-xl mx-auto max-w-4xl animate-fade-in">
+          <div className="relative aspect-video glass-card overflow-hidden rounded-xl mx-auto max-w-4xl animate-fade-in hover:shadow-2xl transition-shadow duration-300">
+            <img 
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
+              alt="UI Forge Demo" 
+              className="w-full h-full object-cover opacity-50 transition-transform duration-500 hover:scale-105"
+            />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer hover-scale">
+              <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 hover:bg-primary">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 5V19L19 12L8 5Z" fill="white" />
                 </svg>
               </div>
             </div>
-            <img 
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-              alt="UI Forge Demo" 
-              className="w-full h-full object-cover opacity-50"
-            />
           </div>
         </div>
       </section>
@@ -206,17 +172,17 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="glass-card p-8 md:p-12 rounded-xl bg-gradient-to-r from-secondary/20 to-primary/20 animate-fade-in">
+          <div className="glass-card p-12 rounded-xl bg-gradient-to-r from-secondary/20 to-primary/20 animate-fade-in">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your UI Workflow?</h2>
-              <p className="text-muted-foreground mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your UI Workflow?</h2>
+              <p className="text-muted-foreground mb-8 text-lg">
                 Join thousands of developers who are building better user interfaces faster with UI Forge.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <CustomButton variant="primary" size="lg">
+                <CustomButton variant="primary" size="lg" className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
                   Download UI Forge
                 </CustomButton>
-                <CustomButton variant="outline" size="lg">
+                <CustomButton variant="outline" size="lg" className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
                   View Documentation
                 </CustomButton>
               </div>
