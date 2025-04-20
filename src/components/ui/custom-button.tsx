@@ -20,7 +20,7 @@ const CustomButton = ({
   children,
   ...props
 }: ButtonProps) => {
-  const baseClasses = "inline-flex items-center justify-center font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary";
+  const baseClasses = "inline-flex items-center justify-center font-medium transition-all rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variantClasses = {
     primary: "btn-primary",
@@ -38,17 +38,18 @@ const CustomButton = ({
     baseClasses,
     variantClasses[variant],
     sizeClasses[size],
+    "animate-scale",
     className
   );
   
   return (
     <button className={classes} {...props}>
       {icon && iconPosition === "left" && (
-        <span className="mr-2">{icon}</span>
+        <span className="mr-2 -ml-1">{icon}</span>
       )}
       {children}
       {icon && iconPosition === "right" && (
-        <span className="ml-2">{icon}</span>
+        <span className="ml-2 -mr-1">{icon}</span>
       )}
     </button>
   );
