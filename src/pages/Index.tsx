@@ -14,28 +14,28 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <div className="md:w-1/2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight stagger-animation stagger-delay-1">
                 Design Smarter. <br />
                 <span className="text-gradient">Build Faster.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed stagger-animation stagger-delay-2">
                 A powerful Unity plugin that allows developers to visually design, customize, and animate user interfaces—like Figma, but made for Unity.
               </p>
               <div className="flex flex-wrap gap-4">
-                <CustomButton variant="primary" className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                <CustomButton variant="primary" className="stagger-animation stagger-delay-3">
                   Download
                 </CustomButton>
-                <CustomButton variant="secondary" className="animate-slide-up" style={{ animationDelay: "0.4s" }}>
+                <CustomButton variant="secondary" className="stagger-animation stagger-delay-4">
                   View on GitHub
                 </CustomButton>
-                <CustomButton variant="outline" className="animate-slide-up" style={{ animationDelay: "0.5s" }}>
+                <CustomButton variant="outline" className="stagger-animation stagger-delay-5">
                   Watch Demo
                 </CustomButton>
               </div>
             </div>
-            <div className="md:w-1/2 animate-fade-in animate-float" style={{ animationDelay: "0.3s" }}>
-              <div className="glass-card p-4 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+            <div className="md:w-1/2">
+              <div className="glass-card p-4 border border-white/10 rounded-xl overflow-hidden shadow-2xl animate-scale-in">
                 <img 
                   src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" 
                   alt="UI Forge Interface Preview" 
@@ -124,7 +124,7 @@ const Index = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 hover:bg-primary">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 5V19L19 12L8 5Z" fill="white" />
                 </svg>
               </div>
